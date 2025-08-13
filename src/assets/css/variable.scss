@@ -1,0 +1,142 @@
+/* Variables
+----------------------------------------------------------------------------- */
+
+:root {
+  --grid--app-margin: 40px;
+  --grid--app-columns: var(--grid--app-columns-12);
+  --grid--app-columns-12: repeat(12, [col-start] 1fr);
+  --grid--app-columns-10: repeat(10, [col-start] 1fr);
+  --grid--app-columns-8: repeat(8, [col-start] 1fr);
+  --grid--app-columns-6: repeat(6, [col-start] 1fr);
+  --grid--app-columns-5: repeat(5, [col-start] 1fr);
+  --grid--app-columns-4: repeat(4, [col-start] 1fr);
+  --grid--app-columns-3: repeat(3, [col-start] 1fr);
+  --grid--app-columns-2: repeat(2, [col-start] 1fr);
+  --grid--app-columns-1: repeat(1, [col-start] 1fr);
+  --grid--app-gutter: 20px;
+  --grid--app-xheight: 220px;
+}
+
+:root {
+  --color--foreground--100: rgb(0 0 0 / 1);
+  --color--foreground--50: rgb(0 0 0 / 0.5);
+  --color--foreground--33: rgb(0 0 0 / 0.333);
+  --color--foreground--25: rgb(0 0 0 / 0.25);
+  --color--foreground--20: rgb(0 0 0 / 0.2);
+  --color--foreground--15: rgb(0 0 0 / 0.15);
+  --color--foreground--10: rgb(0 0 0 / 0.1);
+  --color--foreground--5: rgb(0 0 0 / 0.05);
+  --color--foreground--1: rgb(0 0 0 / 0.03);
+  --color--foreground--0: rgb(0 0 0 / 0);
+  --color--background--100: rgb(255 255 255 / 1);
+  --color--background--0: rgb(255 255 255 / 0);
+}
+/* Spacing
+------------------------------------------------------
+------------------------------------------------------*/
+:root {
+  /* Spacing 
+  ------------------------------------------------------
+  ------------------------------------------------------*/
+  --spaceSize-144: 144px;
+  --spaceSize-136: 136px;
+  --spaceSize-128: 128px;
+  --spaceSize-120: 120px;
+  --spaceSize-112: 112px;
+  --spaceSize-104: 104px;
+  --spaceSize-96: 96px;
+  --spaceSize-88: 88px;
+  --spaceSize-80: 80px;
+  --spaceSize-72: 72px;
+  --spaceSize-64: 64px;
+  --spaceSize-56: 56px;
+  --spaceSize-48: 48px;
+  --spaceSize-40: 40px;
+  --spaceSize-32: 32px;
+  --spaceSize-24: 24px;
+  --spaceSize-16: 16px;
+  --spaceSize-12: 12px;
+  --spaceSize-8: 8px;
+  --spaceSize-4: 4px;
+
+  /* Header size
+  ------------------------------------------------------
+  ------------------------------------------------------*/
+  --headerFont-72: 72px;
+  --headerFont-64: 64px;
+  --headerFont-56: 56px;
+  --headerFont-48: 48px;
+  --headerFont-40: 40px;
+  --headerFont-32: 32px;
+  --headerFont-24: 24px;
+  --headerFont-20: 20px;
+  --headerFont-16: 16px;
+  --headerFont-12: 12px;
+  /* Body font size
+  ------------------------------------------------------
+  ------------------------------------------------------*/
+  --fontSizeBodyXsmall: 12px;
+  --fontSizeBodySmall: 16px;
+  --fontSizeBodyMedium: 20px;
+  --fontSizeBodyLarge: 24px;
+
+  /* Border Radius
+  ------------------------------------------------------
+  ------------------------------------------------------*/
+  --border-radius-0: 0;
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --border-radius-16: 16px;
+  --border-radius-24: 24px;
+  --border-radius-cir: 100%;
+}
+
+@mixin after-clear {
+  &::after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}
+
+@mixin common-transition {
+  transition: all 200ms ease-in-out;
+}
+
+@mixin scrollbar-light {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: map-get($map: $border-radius, $key: r5);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Media queries breakpoints
+------------------------------------------------------
+------------------------------------------------------*/
+// Extra small screen / phone`
+$screen-xs: "all and (max-width: 500px)";
+$screen-phone: $screen-xs;
+// Small screen / tablet
+$screen-sm: "all and (max-width: 760px) ";
+$screen-tablet: $screen-sm;
+// Medium screen / desktop
+$screen-md: "all and (max-width: 1020px)";
+$screen-desktop: $screen-md;
+// Large screen / wide desktop
+$screen-lg: "all and (max-width: 1280px)";
+$screen-lg-desktop: $screen-lg;
+// Extra Large screen / Extra wide desktop
+$screen-xl: "all and (max-width: 1540px)";
+$screen-xl-desktop: $screen-xl;
